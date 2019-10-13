@@ -13,10 +13,10 @@ class OpenDoorRequest {
         val url = URL("$baseUrl/open-door")
 
         val conn = url.openConnection() as HttpURLConnection
-// 2. Open InputStream to connection
+
         conn.connect()
         val `in` = conn.getInputStream()
-// 3. Download and decode the string response using builder
+
         val stringBuilder = StringBuilder()
         val reader = BufferedReader(InputStreamReader(`in`))
         var line: String
